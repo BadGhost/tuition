@@ -72,8 +72,59 @@
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <?php echo form_error('password'); ?>
-  <button class="btn btn-lg btn-primary btn-block" value="Login" type="submit">Log In</button>
-  <p class="mt-5 mb-3 text-muted">&copy; HISNA 2021</p>
+
+     <div class="form-row">
+       <div class="form-group col-md-6">
+         <input type="text" class="form-control" readonly id="capt">
+       </div>
+       <div style="margin-top:10px; color: #D8000C; background-color: #FFBABA; border-radius: 7px;" id="log"></div>
+       <div class="form-group col-md-6">
+         <input type="text" class="form-control" name = "captcha" id="textinput" placeholder="Captcha">
+       </div>
+         </div>
+
+ <div class="form-group">
+               <button onclick="return validcap()" class="btn btn-lg btn-primary btn-block" value="Login" type="submit">Log In</button>
+               <button onclick="cap()" class="btn btn-link" type="button">Captcha not visible</button>
+         <p class="mt-5 mb-3 text-muted">&copy; HISNA 2021</p>
+     </div>
+   </form>
+<script type="text/javascript">
+ function cap(){
+   var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                var a = alpha[Math.floor(Math.random()*71)];
+                var b = alpha[Math.floor(Math.random()*71)];
+                var c = alpha[Math.floor(Math.random()*71)];
+                var d = alpha[Math.floor(Math.random()*71)];
+                var e = alpha[Math.floor(Math.random()*71)];
+                var f = alpha[Math.floor(Math.random()*71)];
+
+                var final = a+b+c+d+e+f;
+                document.getElementById("capt").value=final;
+              }
+              function validcap()
+              {
+              document.getElementById('log').innerHTML = '';
+               var stg1 = document.getElementById('capt').value;
+               var stg2 = document.getElementById('textinput').value;
+               if(stg1==stg2)
+               {
+                  alert("Successfully validated!");
+                  return true;
+                }
+                else
+                {
+                  alert("Invalid! Try again");
+                  return false;
+                }
+              }
+</script>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </form>
 
 
