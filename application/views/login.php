@@ -109,7 +109,7 @@
               document.getElementById('log').innerHTML = '';
                var stg1 = document.getElementById('capt').value;
                var stg2 = document.getElementById('textinput').value;
-               if(stg1==stg2 && final! == null)
+               if(stg1==stg2 && final!==null)
                {
                   alert("Successfully validated!");
                   return true;
