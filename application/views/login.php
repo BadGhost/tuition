@@ -79,7 +79,7 @@
        </div>
        <div style="margin-top:10px; color: #D8000C; background-color: #FFBABA; border-radius: 7px;" id="log"></div>
        <div class="form-group col-md-6">
-         <input type="text" class="form-control" name = "captcha" id="textinput" placeholder="Captcha">
+         <input type="text" class="form-control" name = "captcha" id="textinput" placeholder="Captcha" required>
        </div>
          </div>
 
