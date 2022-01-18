@@ -18,7 +18,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" id="Dropdown">
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo base_url().'welcome'; ?>">Logout</a>
+                        <a class="dropdown-item" href="<?php echo base_url().'appmodule/logout'; ?>">Logout</a>
                     </div>
                 </li>
             </ul>
